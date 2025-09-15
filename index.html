@@ -34,6 +34,42 @@
       text-shadow: 0 4px 12px rgba(0,0,0,0.3);
       animation: float 3s ease-in-out infinite;
     }
+    .photo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .photo-container img {
+      width: 74px;
+      height: 74px;
+      border-radius: 14px;
+      object-fit: cover;
+      filter: grayscale(.05) contrast(1.02);
+    }
+    .headline {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.3);
+      margin: 12px 0;
+    }
+    .sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      margin: 6px 0;
+    }
+    .floating-headline {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffdde1;
+      margin: 12px 0;
+      animation: floatText 3s ease-in-out infinite alternate;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    @keyframes floatText{
+      0%{ transform: translateY(0px);}
+      100%{ transform: translateY(-8px);}
+    }
     .video-wrap {
       position: relative;
       width: 100%;
@@ -42,6 +78,7 @@
       overflow: hidden;
       box-shadow: 0 8px 30px rgba(0,0,0,0.25);
       border: 1px solid rgba(255,255,255,0.05);
+      margin-top: 18px;
     }
     .video-wrap iframe {
       position: absolute;
@@ -62,24 +99,24 @@
       cursor: pointer;
       transition: all 0.3s;
       box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      margin: 6px;
     }
     .btn:hover {
       transform: translateY(-2px) scale(1.03);
       box-shadow: 0 8px 22px rgba(255,105,140,0.25);
     }
     .extra-text {
-      margin-top: 30px;
-      padding: 28px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
-      color: #fff;
-      font-size: 19px;
-      line-height: 2;
-      text-align: center;
-      text-shadow: 0 3px 12px rgba(0,0,0,0.35);
-      border: 1px solid rgba(255,255,255,0.25);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2), inset 0 6px 18px rgba(255,255,255,0.05);
-      font-style: italic;
+      margin-top: 26px;
+      padding: 20px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.97);
+      font-size: 18px;
+      line-height: 1.9;
+      text-align: justify;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+      border-left: 4px solid #ff9a9e;
+      box-shadow: inset 0 4px 18px rgba(0,0,0,0.15);
     }
     @keyframes float {
       0%,100% { transform: translateY(0); }
@@ -94,19 +131,39 @@
 <body>
   <div class="card">
     <h1>မြတ်နိုးသူအတွက် 💌</h1>
+
+    <div class="photo-container">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhS5tYHygptQcF0FYSemoCXtf23wh_GHlfEylpufqYX_Rg6izOVilrIacm8faYtnS76SqLncpFeiN8bfLm2vfbv1AfII58JpN6QZhzAR4htRVtajw8N_If8K5cGikjMpmCevsc6enYGJ0eV0UOTj7Y7LWuERO29Yrhp0u-MHQmUIPUknvyDqnwSA8BJa4M=w945-h600-p-k-no-nu" alt="My Photo">
+    </div>
+
+    <div class="headline">
+      ကိုယ်တောင်းပန်ပါတယ် စိတ်မဆိုးပါနဲ့တော့ မြတ်နိုးရယ် 💘
+    </div>
+    <div class="sub">
+      ဒီသီချင်းကို ကိုယ်မင်းအတွက် ပေးလိုက်ပါတယ်။ 💘
+    </div>
+    <div class="sub">
+      မချော့တတ်လို့ သီချင်းလေးပဲပို့လိုက်ပါတယ်။ ချော့လို့မရမှန်းတော့သိပါတယ်။ 💘
+    </div>
+    <div class="floating-headline">
+      ဖြစ်ခဲ့တာတွေအတွက် စိတ်မကောင်းပါဘူး ပြန်လာခဲ့ပါနော် 💘
+    </div>
+
     <div class="video-wrap">
       <iframe id="ytplayer" src="https://www.youtube.com/embed/wS5l8pYqbfI?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
     </div>
+
     <div class="controls">
       <button class="btn" onclick="unmuteVideo()">🔊 Play with Sound</button>
       <button class="btn" onclick="copyLink()">💖 Send this to my lover</button>
     </div>
+
     <div class="extra-text">
       <p>
-        မင်းနဲ့ကြားတွင် ဖြစ်သွားခဲ့တဲ့ အရာတွေကြောင့် ကိုယ်တကယ့်ကိုစိတ်မကောင်းပါဘူး။ <br><br>
-        ကိုယ်မင်းနဲ့အရာအားလုံးကို ပြန်အဆင်ပြေချင်ပါတယ်။ <br><br>
-        မင်းကို ဂရုပြုချစ်မြတ်နိုးတာ အစစအရာရာမှာ မပြေမလည်သွားတာတွေရှိပေမယ့် <br><br>
-        ယခုမှစပြီး နောက်ထပ် ကိုယ့်မှာ မင်းအပြစ်မြင်စရာမရှိစေရပါဘူး။ <br><br>
+        မင်းနဲ့ကြားမှာ ဖြစ်သွားခဲ့တဲ့ အရာတွေကြောင့် ကိုယ်တကယ့်ကိုစိတ်မကောင်းပါဘူး။  
+        ကိုယ်မင်းနဲ့အရာအားလုံးကို ပြန်အဆင်ပြေချင်ပါတယ်။  
+        မင်းကို ချစ်တဲ့စိတ်ကြောင့် အစစအရာရာမှာ မပြေမလည်သွားတာတွေရှိပေမယ့်  
+        ယခုမှစပြီး နောက်ထပ် ကိုယ့်မှာ မင်းအပြစ်မြင်စရာမရှိစေရပါဘူး။  
         နားလည်ပေးခဲ့ဖို့ တောင်းပန်ရင်း Noe Noeရေ… ပြန်လာပေးပါနော် 💖
       </p>
     </div>
