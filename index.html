@@ -73,18 +73,17 @@
     .video-wrap {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 ratio */
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 8px 30px rgba(0,0,0,0.25);
       border: 1px solid rgba(255,255,255,0.05);
       margin-top: 18px;
     }
-    .video-wrap iframe {
-      position: absolute;
-      top: 0; left: 0;
+    video {
       width: 100%;
-      height: 100%;
+      height: auto;
+      border-radius: 14px;
+      display: block;
     }
     .controls {
       margin-top: 18px;
@@ -150,11 +149,14 @@
     </div>
 
     <div class="video-wrap">
-      <iframe id="ytplayer" src="https://www.youtube.com/embed/wS5l8pYqbfI?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      <video id="myvideo" autoplay muted loop controls>
+        <source src="https://raw.githubusercontent.com/voldemort-cloud/HninHnin/main/%E1%80%99%E1%80%BC%E1%80%90%E1%80%BA%E1%80%94%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%9E%E1%80%B0%E1%80%A1%E1%80%90%E1%80%BD%E1%80%80%E1%80%BA.mp4" type="video/mp4">
+        မင်း browser က video ကို support မလုပ်နိုင်ပါ။
+      </video>
     </div>
 
     <div class="controls">
-      <button class="btn" onclick="unmuteVideo()">🔊 Play with Sound</button>
+      <button class="btn" onclick="playWithSound()">🔊 Play with Sound</button>
       <button class="btn" onclick="copyLink()">💖 Send this to my lover</button>
     </div>
 
@@ -170,9 +172,10 @@
   </div>
 
   <script>
-    function unmuteVideo(){
-      const iframe = document.getElementById("ytplayer");
-      iframe.src = "https://www.youtube.com/embed/wS5l8pYqbfI?autoplay=1&mute=0";
+    const video = document.getElementById("myvideo");
+    function playWithSound(){
+      video.muted = false;
+      video.play();
     }
     function copyLink(){
       navigator.clipboard.writeText(window.location.href);
