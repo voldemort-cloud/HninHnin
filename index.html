@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>မြတ်နိုးသူအတွက် — A Little Surprise</title>
+  <title>မြတ်နိုးသူအတွက် 💌</title>
   <style>
     body {
       margin: 0;
@@ -13,11 +13,10 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      overflow-y: auto;
     }
     .card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(18px);
       border-radius: 20px;
       padding: 30px;
       width: 95%;
@@ -40,29 +39,29 @@
       margin-bottom: 16px;
     }
     .photo-container img {
-      width: 74px;
-      height: 74px;
-      border-radius: 14px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
       object-fit: cover;
-      filter: grayscale(.05) contrast(1.02);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
     }
     .headline {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: #fff;
-      text-shadow: 0 3px 12px rgba(0,0,0,0.3);
       margin: 12px 0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .sub {
       font-size: 1.1rem;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255,255,255,0.95);
       margin: 6px 0;
     }
     .floating-headline {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      color: #ffdde1;
-      margin: 12px 0;
+      color: #ffe1e6;
+      margin: 14px 0;
       animation: floatText 3s ease-in-out infinite alternate;
       text-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
@@ -75,10 +74,10 @@
       width: 100%;
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.25);
       border: 1px solid rgba(255,255,255,0.05);
       margin-top: 18px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.4);
       padding: 20px;
     }
     audio {
@@ -86,22 +85,24 @@
       outline: none;
     }
     .controls {
-      margin-top: 18px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
     .btn {
       background: linear-gradient(90deg, #ff6a88, #ff99ac);
       color: white;
-      padding: 12px 22px;
+      padding: 12px 28px;
       border: none;
       border-radius: 30px;
       font-size: 16px;
       cursor: pointer;
       transition: all 0.3s;
       box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-      margin: 6px;
     }
     .btn:hover {
-      transform: translateY(-2px) scale(1.03);
+      transform: translateY(-2px) scale(1.05);
       box-shadow: 0 8px 22px rgba(255,105,140,0.25);
     }
     .extra-text {
@@ -147,7 +148,7 @@
 
     <!-- Audio Embed -->
     <div class="audio-wrap">
-      <audio id="bgAudio" autoplay loop controls>
+      <audio id="bgAudio" loop controls muted>
         <source src="မြတ်နိုးသူအတွက်.mp3" type="audio/mpeg">
         မင်း browser က audio ကို support မလုပ်နိုင်ပါ။
       </audio>
